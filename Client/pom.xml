@@ -12,6 +12,23 @@
     <groupId>ProgramWerzeugClient</groupId>
     <artifactId>Client</artifactId>
     <packaging>jar</packaging>
+<build>
+    <!-- Make this jar executable with java -jar and not( javac -cp)
+            -->
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+            <archive>
+                <manifest>
+                    <mainClass>Client</mainClass>
+                </manifest>
+            </archive>
+        </configuration>
+    </plugin>
+</plugins>
+</build>
 
 
     <dependencies>

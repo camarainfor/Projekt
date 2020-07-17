@@ -11,29 +11,23 @@
     <groupId>ProgramWerzeugServer</groupId>
     <artifactId>Server</artifactId>
     <packaging>jar</packaging>
-    <!-- <build>
+
+    <build>
+        <!--manifestdatei-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
+                <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <source>8</source>
-                    <target>8</target>
+                    <archive>
+                        <manifest>
+                            <mainClass>Server</mainClass>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-    <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>-->
-
-    <!--plugins junit test-->
-
 
 
 </project>

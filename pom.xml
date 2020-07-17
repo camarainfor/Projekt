@@ -8,42 +8,18 @@
     <artifactId>ProjektUDP</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+
     <modules>
         <module>Client</module>
         <module>Server</module>
     </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
     <build>
+
         <plugins>
-            <!-- Set a JDK-version = 1.8 compiler level -->
-            <!-- au cas ou on veut pas nous meme gerer la version
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>${jdk.version}</source>
-                    <target>${jdk.version}</target>
-                </configuration>
-                       </plugin>
-            -->
-
-            <!-- Make this jar executable cest un example que jai pris sur intermet
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <configuration>
-                           <archive>
-                        <manifest>
-                            <!- Jar file entry point ->
-                            <mainClass>Client</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin> -->
-
-
-
 
 
             <plugin>
@@ -54,8 +30,10 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
+
             </plugin>
-            <!-- les commentaires-->
+            <!-- Javadoc-->
+
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-javadoc-plugin</artifactId>
@@ -66,10 +44,19 @@
                 </plugin>
 
 
+
+            <!-- le plugin pour Junittest -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.22.0</version>
+            </plugin>
+
+            <!-- checkstyleplugin-->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.1.1</version>
             </plugin>
 
 
@@ -97,7 +84,19 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <!--checkstyle-->
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>3.1.1</version>
+                <configuration>
+                    <configLocation>checkstyle.xml</configLocation>
+                </configuration>
+                </plugin>
+        </plugins>
+    </reporting>
 
 
 </project>
