@@ -3,7 +3,7 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="73.5" y="329.4746453611609">Tester</node>
+    <node x="73.5" y="356.0">Tester</node>
     <node x="73.5" y="0.0">Server</node>
     <node x="0.0" y="167.0">Client</node>
   </nodes>
@@ -17,20 +17,20 @@
       <point x="190.5" y="142.0" />
       <point x="39.0" y="58.5" />
     </edge>
-    <edge source="Tester" target="Client">
-      <point x="-39.0" y="-69.5" />
-      <point x="112.5" y="331.0" />
-      <point x="97.5" y="331.0" />
-      <point x="0.0" y="69.5" />
-    </edge>
     <edge source="Client" target="Server">
       <point x="0.0" y="-69.5" />
       <point x="97.5" y="142.0" />
       <point x="112.5" y="142.0" />
       <point x="-39.0" y="58.5" />
     </edge>
+    <edge source="Tester" target="Client">
+      <point x="-39.0" y="-69.5" />
+      <point x="112.5" y="331.0" />
+      <point x="97.5" y="331.0" />
+      <point x="0.0" y="69.5" />
+    </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0555938037865746" x="241.0" y="188.0" />
+  <settings layout="Hierarchic Group" zoom="0.9377713458755427" x="290.5" y="335.5" />
   <SelectedNodes>
     <node>Tester</node>
   </SelectedNodes>
